@@ -1,0 +1,15 @@
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+
+$mainBackgroundColor:#43AA8B;
+$mainForegroundColor:#FCFFFD;
+
+
+body{
+    background: $mainBackgroundColor;
+    color: $mainForegroundColor;
+    font-family: Roboto;
+}

@@ -1,0 +1,74 @@
+@import '../../App.scss';
+
+$borderColor:#028090;
+$backgroundColor: #11AAB2;
+
+
+*{
+
+    transition: .5s;
+}
+
+.item-container{
+    display: grid;
+    grid-template-columns:  .5fr 2fr .5fr;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.item-container__main{
+    justify-self: center;
+    align-self: center;
+    margin-top:1rem;
+    background-color: rgba(67, 170, 139, 0.24);
+    color:$mainForegroundColor;
+    border:0px;
+    outline: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item-container__main___text{
+    align-self: center;
+    justify-self: start;
+    font-size:1.8rem;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+}
+
+.item-container__main___button{
+    align-self: center;
+    justify-self: center;
+    border: 0px;
+    background: rgba(67, 170, 139, 0.99);
+}
+
+.item-container__main___button____edit{
+    padding: .2rem;
+    margin: .5rem;
+    width:8rem;
+    @extend .item-container__main___text;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    font-style: normal;
+    background: greenyellow;
+  
+}
+
+.item-container__main___button____delete{
+    @extend .item-container__main___button____edit;
+    background: orange;
+}
+
+.item-container__main___button____delete:hover{
+    transform: rotate(15deg);
+    width: 10rem;
+    background: blue;
+    cursor: pointer;
+}
+
+.item-container__main___button____edit:hover{
+    @extend .item-container__main___button____delete:hover
+}

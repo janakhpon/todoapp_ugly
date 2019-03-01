@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+$borderColor:#028090;
+$backgroundColor: #11AAB2;
+
+
+*{
+
+    transition: .5s;
+}
+
+hr{
+    width: 50rem;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin: .5rem .2rem 1rem .2rem;
+
+
+}
+.main-displaylist{
+
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin: .5rem .2rem 1rem .2rem;
+
+}
+
+.main-displaylist__row{
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto;
+}
+
+.main-displaylist__row > div.main-displaylist__row___item{
+    overflow: scroll;
+}
+.main-displaylist__row___item{
+
+    @extend .main-displaylist;
+   
+    
+}
+
+
+.main-displaylist__row___button{
+    @extend .main-displaylist;
+
+}
+
+.main-displaylist__row___button____prop{
+    width: 10rem;
+    background:red;
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.main-displaylist__row___button____prop:hover{
+    transform: translateY(1rem);
+    cursor: pointer;
+    border-color: crimson;
+    background:blue;
+    width: 8rem;
+    font-size: 1.3rem;
+    
+}
+
+

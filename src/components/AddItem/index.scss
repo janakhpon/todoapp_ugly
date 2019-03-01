@@ -1,0 +1,76 @@
+@import '../../App.scss';
+
+$borderColor:#028090;
+$backgroundColor: #11AAB2;
+
+.search-container{
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.search-container__main-display{
+    justify-self: center;
+    align-self: center;
+    margin-top:1rem;
+    background-color: rgba(67, 170, 139, 0.24);
+    color:$mainForegroundColor;
+    border:0px;
+    outline: none;
+}
+
+
+.search-container__main-display___input{
+
+    @extend .search-container__main-display;
+    font-size:1.6rem;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    
+}
+
+
+.search-container__main-display___button{
+
+
+    @extend .search-container__main-display___input;
+    
+    padding: .5rem;
+    font-style: normal;
+    font-weight: normal;
+    border:1px solid $borderColor;
+    background: $backgroundColor;
+    margin: .2rem;
+    border-radius: .5rem;
+
+    
+}
+
+
+.search-container__main-display___button:hover{
+
+    cursor: pointer;
+    transform: skew(20deg);
+    animation: shake 2s infinite;
+    animation-direction: alternate;
+    border-color: darken($borderColor,.2);
+   
+    transition: ease-out;
+}
+
+
+@keyframes shake {
+  0% {
+    transform: skewY(20deg);
+  }
+
+  50% {
+      transform: skewY(0deg);
+  }
+  100% {
+    transform: skewY(-20deg);
+  }
+}
